@@ -1,0 +1,26 @@
+The "Launcher.exe" file was marked as a Win32/Varpes.M!cl variant.
+
+Yes, it is a false positive!
+
+Please, check your Anti-Virus and Right-Click the file, goto "Report as False Positive."
+
+You can also find your Anti-virus false positive submission form with a google search.  Google "ANTI-Virus_NAME submit false positive"  The issue will be fixed within 48 hours.
+
+The "Launcher.exe" Code:
+
+:: ===========================================================================
+:: NAME:      Launcher.cmd
+:: AUTHOR:    Manuel Gil.
+:: 
+:: PURPOSE:   To provide a command line method of launching applications that
+::            prompt for elevation (Run as Administrator) on Windows.
+::
+:: VERSION:   1.0.8.0
+:: DATE:      08/04/2016.
+:: ===========================================================================
+
+if exist "%~dp0ResetWUEng.cmd" (
+    call "%~dp0ResetWUEng.cmd"
+)
+
+goto :eof
