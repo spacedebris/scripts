@@ -1,0 +1,16 @@
+#thanks to aandresortiz
+# install with yaourt
+yaourt -S firebird-superserver
+
+# create symlink for firebird isql due to a conflict with unixODBC isql
+# check with this command:
+whereis isql (ENTER)
+isql: /usr/bin/isql /opt/firebird/bin/isql /usr/share/man/man1/isql.1.gz
+
+# creating symlink:
+sudo ln -s /opt/firebird/bin/isql /usr/bin/isql-fb
+
+# enabling and starting service
+
+sudo systemctl enable firebird.service
+sudo systemctl start firebird.service
