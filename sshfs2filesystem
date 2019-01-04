@@ -1,0 +1,1 @@
+sshfs user@host:/path/to/remote/folder /path/to/local/mount/point -o reconnect
